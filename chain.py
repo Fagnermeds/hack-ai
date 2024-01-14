@@ -37,6 +37,7 @@ async def chain(question):
       "Seniority",
       "Permission",
       "Skills",
+      "Project",
     ],
     sample_rows_in_table_info=2,
   )
