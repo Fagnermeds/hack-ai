@@ -1,5 +1,5 @@
 import { AfterViewInit, Component, ElementRef, Input, OnDestroy, ViewChild } from '@angular/core';
-import { Subscription, debounceTime, distinctUntilChanged, fromEvent } from 'rxjs';
+import { Subscription, debounceTime } from 'rxjs';
 import { ChatSessionService } from 'src/app/services/chat-session.service';
 
 @Component({

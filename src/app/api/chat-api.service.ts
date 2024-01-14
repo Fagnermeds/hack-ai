@@ -1,12 +1,13 @@
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable, catchError, delay, map, of, throwError } from 'rxjs';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root',
 })
 export class ChatApiService {
-  url = 'https://1e7d-177-37-196-70.ngrok-free.app/questions';
+  url = environment.baseUrl;
 
   constructor(private http: HttpClient) {}
 
@@ -25,5 +26,4 @@ export class ChatApiService {
     return throwError(() => new Error('Desculpe, não entendi'));
   }
 
-  // return of({ answer: 'Olá, tudo bem?' }).pipe(delay(100));
 }

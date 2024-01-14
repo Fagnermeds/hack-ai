@@ -10,8 +10,9 @@ import { IMessage } from '../interfaces/message';
 export class ChatSessionService {
   private _messages$ = new BehaviorSubject<IMessage[]>([{
     sender: Sender.Bot,
-    message: 'Hi! I am a bot. How can I help you?',
+    message: 'Olá! Eu sou seu assistente virtual. Como posso te ajudar?',
   }]);
+
   public messages$ = this._messages$.asObservable();
   public loading$ = new BehaviorSubject<boolean>(false);
   public dialogActions$ = new BehaviorSubject<boolean>(false);

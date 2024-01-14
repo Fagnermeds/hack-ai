@@ -2,13 +2,13 @@
   <span class="text-gray-300">Gostou da minha resposta?</span>
 
   <div class="flex gap-3">
-    <button class="px-6 py-2 border border-red-500 rounded-32" (click)="onFeedback.emit(true)">
+    <button class="px-6 py-2 border border-red-500 rounded-32 hover:bg-red-50" (click)="onFeedback.emit(true)">
       <img src="/assets/icons/deslike-icon.svg" alt="Não gostei">
     </button>
-    <button class="px-6 py-2 border border-green-400 rounded-32" (click)="onFeedback.emit(false)">
+    <button class="px-6 py-2 border border-green-400 rounded-32 hover:bg-green-50" (click)="onFeedback.emit(false)">
       <img src="/assets/icons/like-icon.svg" alt="Não gostei">
     </button>
-    <button class="px-6 py-2 border border-purple-200 rounded-32" (click)="onRefresh.emit()">
+    <button class="px-6 py-2 border border-purple-200 rounded-32 hover:bg-purple-50" (click)="onRefresh.emit()">
       <img src="/assets/icons/refresh-icon.svg" alt="Refazer pergunta">
     </button>
   </div>

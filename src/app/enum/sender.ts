@@ -1,4 +1,4 @@
 export enum Sender {
-  Bot = 'Bot',
+  Bot = 'Da',
   User = 'Eu',
 }
