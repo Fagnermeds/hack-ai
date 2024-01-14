@@ -1,9 +1,24 @@
-<div class="flex items-center justify-between px-4 py-2 border border-gray-400 rounded-2xl">
-  <input class="w-full text-sm text-purple-600 outline-none sm:text-base" type="text" [(ngModel)]="message" name="name" placeholder="Como eu posso te ajudar?" (keyup.enter)="sendMessage()">
+<div
+  class="flex items-center justify-between px-4 py-2 border border-gray-400 rounded-2xl"
+>
+  <input
+    class="w-full text-sm text-purple-600 outline-none sm:text-base"
+    type="text"
+    [(ngModel)]="message"
+    name="name"
+    placeholder="Como eu posso te ajudar?"
+    (keyup.enter)="sendMessage()"
+    [disabled]="(chatService.loading$ | async) || false"
+  />
 
-  <button class="grid items-center w-20 px-6 py-2 transition-colors bg-gray-200 rounded-2xl" [class.bg-purple-400]="message.length > 0" (click)="sendMessage()">
+  <button
+    class="grid items-center w-20 px-6 py-2 transition-colors bg-gray-200 rounded-2xl"
+    [class.bg-purple-400]="message.length > 0"
+    (click)="sendMessage()"
+    [disabled]="(chatService.loading$ | async) || false"
+  >
     <div class="w-8 h-8">
-      <img src="/assets/icons/send-icon.svg" alt="Enviar">
+      <img src="/assets/icons/send-icon.svg" alt="Enviar" />
     </div>
   </button>
 </div>

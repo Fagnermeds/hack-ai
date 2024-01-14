@@ -1,10 +1,10 @@
-<li class="flex mt-2 border-b border-gray-100 py-4">
+<li class="flex py-4 mt-2 border-b border-gray-100">
   <div class="flex flex-1">
-    <div class="w-9 h-9 flex justify-center items-center text-white font-medium rounded-full mr-2" [ngClass]="sender === SenderEnum.Bot ? 'bg-purple-400' : 'bg-yellow-100'">
+    <div class="flex items-center justify-center mr-2 font-medium text-white rounded-full w-9 h-9" [ngClass]="sender === SenderEnum.Bot ? 'bg-purple-400' : 'bg-yellow-100'">
       {{ sender }}
     </div>
 
-    <p class="text-gray-400 font-normal flex-1 text-base self-center text-wrap">
+    <p class="self-center flex-1 text-base font-normal text-gray-400 text-wrap">
       {{ message }}
     </p>
   </div>

@@ -9,7 +9,7 @@ export class ChatInputComponent {
   @Output() onSendQuestion = new EventEmitter<void>();
   message = '';
 
-  constructor(private chatService: ChatSessionService) {}
+  constructor(public chatService: ChatSessionService) {}
 
   sendMessage() {
     if (!this.message) {

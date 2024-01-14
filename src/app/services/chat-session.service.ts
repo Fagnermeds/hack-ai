@@ -39,10 +39,10 @@ export class ChatSessionService {
       },
       error: (err) => {
         this.addMessage({ sender: Sender.Bot, message: err.message });
+        this.actionsToFinish();
       },
       complete: () => {
-        this.hideLoading();
-        this.scrollToBottom();
+        this.actionsToFinish();
       },
     });
   }
@@ -77,6 +77,10 @@ export class ChatSessionService {
     this.scrollToBottom$.next();
   }
 
+  actionsToFinish() {
+    this.hideLoading();
+    this.scrollToBottom();
+  }
 
 }
 
