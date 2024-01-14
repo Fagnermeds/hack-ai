@@ -1,9 +1,9 @@
-  <ul class="messages border border-gray-400 min-h-52 rounded-lg mt-4 p-4 h-96 overflow-y-auto">
+  <ul class="scroll-container messages border border-gray-400 min-h-52 rounded-lg mt-4 p-4 h-[70vh] overflow-y-auto" #messageContainer>
   <!-- Messages -->
-  <app-chat-message *ngFor="let message of chatSession.messages$ | async"
-    [sender]="message.sender"
-    [message]="message.message"
-  ></app-chat-message>
+  <app-chat-message *ngFor="let message of chatSession.messages$ | async" [sender]="message.sender" [message]="message.message"></app-chat-message>
+
+  <!-- Feedback Actions -->
+  <app-chat-feedback-actions [visibility]="(chatSession.dialogActions$ | async) || false" (onFeedback)="sendFeedback($event)" (onRefresh)="refreshQuestion()"></app-chat-feedback-actions>
 
   <!-- Loading -->
   <app-loading [loading]="(chatSession.loading$ | async) || false"></app-loading>

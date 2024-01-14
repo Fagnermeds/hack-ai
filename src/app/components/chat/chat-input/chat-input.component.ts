@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { ChatSessionService } from 'src/app/services/chat-session.service';
 
 @Component({
@@ -6,6 +6,7 @@ import { ChatSessionService } from 'src/app/services/chat-session.service';
   templateUrl: './chat-input.component.html',
 })
 export class ChatInputComponent {
+  @Output() onSendQuestion = new EventEmitter<void>();
   message = '';
 
   constructor(private chatService: ChatSessionService) {}

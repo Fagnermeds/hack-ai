@@ -1,59 +1,67 @@
-/* You can add global styles to this file, and also import other style files */
+/* --------------- Reset CSS --------------- */
 *, *::before, *::after {
   box-sizing: border-box;
+  font-family: "Montserrat", 'Courier New', Courier, monospace;
 }
-/*
-  2. Remove default margin
-*/
+
 * {
   margin: 0;
 }
-/*
-  3. Allow percentage-based heights in the application
-*/
+
 html, body {
   height: 100%;
   background-image: url('./assets/background.png');
   background-repeat: no-repeat;
   background-size: cover;
 }
-/*
-  Typographic tweaks!
-  4. Add accessible line-height
-  5. Improve text rendering
-*/
+
 body {
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
 }
-/*
-  6. Improve media defaults
-*/
+
 img, picture, video, canvas, svg {
   display: block;
   max-width: 100%;
 }
-/*
-  7. Remove built-in form typography styles
-*/
+
 input, button, textarea, select {
   font: inherit;
 }
-/*
-  8. Avoid text overflows
-*/
+
 p, h1, h2, h3, h4, h5, h6 {
   overflow-wrap: break-word;
 }
-/*
-  9. Create a root stacking context
-*/
 
+/* ---------- Tailwind ---------- */
 
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
-* {
-  font-family: "Montserrat", 'Courier New', Courier, monospace;
+
+/* --------- Scrollbar --------- */
+
+/* width */
+::-webkit-scrollbar {
+  width: 16px;
+  height: 16px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  border-radius: 100vh;
+  background: #edf2f7;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #B3B3B3;
+  border-radius: 100vh;
+  border: 3px solid #edf2f7;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #a0aec0;
 }

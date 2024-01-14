@@ -10,4 +10,8 @@ export class ChatMessageComponent {
   @Input() sender!: string;
 
   SenderEnum = Sender;
+
+  async copyToClipboard(message: string) {
+    navigator.clipboard.writeText(message);
+  }
 }
