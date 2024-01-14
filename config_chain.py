@@ -33,7 +33,6 @@ tool_description = """
   Respond in natural language according to the data in the table.
   Be an expert and do the joins correctly.
   If a query was generated and is valid, I should execute the query.
-  Be expert and dont be repetitive in your answers.
 """
 
 custom_suffix = """
