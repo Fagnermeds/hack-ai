@@ -16,6 +16,7 @@ module.exports = {
         "gray-300": "#585861",
         "gray-400": "#575759",
       },
+      height: {},
     },
   },
   plugins: [],

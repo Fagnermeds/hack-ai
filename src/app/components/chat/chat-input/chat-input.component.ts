@@ -1,5 +1,4 @@
-import { Component, Input } from '@angular/core';
-import { ChatApiService } from 'src/app/api/chat.service';
+import { Component } from '@angular/core';
 import { ChatSessionService } from 'src/app/services/chat-session.service';
 
 @Component({
@@ -9,12 +8,13 @@ import { ChatSessionService } from 'src/app/services/chat-session.service';
 export class ChatInputComponent {
   message = '';
 
-  constructor(
-    private chatService: ChatSessionService,
-    private chatApiService: ChatApiService
-  ) {}
+  constructor(private chatService: ChatSessionService) {}
 
   sendMessage() {
+    if (!this.message) {
+      return;
+    }
+
     this.chatService.sendMessage(this.message);
 
     this.message = '';

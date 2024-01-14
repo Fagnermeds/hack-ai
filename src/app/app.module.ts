@@ -11,6 +11,7 @@ import { ChatDisplayComponent } from './components/chat/chat-display/chat-displa
 import { ChatMessageComponent } from './components/chat/chat-display/chat-message/chat-message.component';
 import { ChatHeaderComponent } from './components/chat/chat-header/chat-header.component';
 import { ChatInputComponent } from './components/chat/chat-input/chat-input.component';
+import { LoadingComponent } from './components/loading/loading.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { ChatInputComponent } from './components/chat/chat-input/chat-input.comp
     ChatHeaderComponent,
     ChatMessageComponent,
     ChatDisplayComponent,
-    ChatInputComponent
+    ChatInputComponent,
+    LoadingComponent
   ],
   imports: [
     BrowserModule,

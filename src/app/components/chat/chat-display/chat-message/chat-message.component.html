@@ -1,5 +1,5 @@
 <li class="flex mt-2 border-b border-gray-100 py-4">
-  <div class="w-9 h-9 flex justify-center items-center text-white font-medium rounded-full mr-2" [ngClass]="isBot ? 'bg-purple-400' : 'bg-yellow-100'">
+  <div class="w-9 h-9 flex justify-center items-center text-white font-medium rounded-full mr-2" [ngClass]="sender === SenderEnum.Bot ? 'bg-purple-400' : 'bg-yellow-100'">
     {{ sender }}
   </div>
 
