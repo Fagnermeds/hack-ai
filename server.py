@@ -1,7 +1,7 @@
 import os
 from dotenv import load_dotenv
 from flask import Flask, request, json, make_response
-from flask_cors import CORS
+from flask_cors import cross_origin
 import asyncio
 
 from chain import chain
@@ -9,7 +9,6 @@ from chain import chain
 load_dotenv()
 
 app = Flask(__name__)
-CORS(app)
 
 def run(chain, *args):
   loop = asyncio.new_event_loop()
@@ -20,6 +19,7 @@ def run(chain, *args):
     loop.close()
 
 @app.route("/questions", methods=['POST'])
+@cross_origin()
 def get_answer():
   if request.method == 'POST' and request.is_json:
     data = request.get_json()
