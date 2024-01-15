@@ -43,7 +43,7 @@ async def chain(question):
     sample_rows_in_table_info=2,
   )
   
-  llm = ChatOpenAI(model_name="gpt-3.5-turbo",temperature=0)
+  llm = ChatOpenAI(model_name="gpt-4",temperature=0)
   toolkit=SQLDatabaseToolkit(db=db, llm=llm)
 
   agent = create_sql_agent(
