@@ -38,10 +38,11 @@ async def chain(question):
       "Permission",
       "Skills",
       "Project",
+      "ProjectStatus",
     ],
     sample_rows_in_table_info=2,
   )
-
+  
   llm = ChatOpenAI(model_name="gpt-3.5-turbo",temperature=0)
   toolkit=SQLDatabaseToolkit(db=db, llm=llm)
 
