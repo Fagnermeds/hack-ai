@@ -55,6 +55,7 @@ tool_description = """
   Respond in natural language according to the data in the table.
   Be an expert and do the joins correctly.
   If a query was generated and is valid, I should execute the query.
+  I'm working with dates in UTC.
 """
 
 custom_suffix = """
@@ -62,6 +63,7 @@ custom_suffix = """
   If the examples are enough to construct the query, I can build it.
   Otherwise, I can then look at the tables in the database to see what I can query.
   Then I should query the schema of the most relevant tables.
+  Return the answer in Brazilian Portuguese.
 """
 custom_prefix="""
   Given an input question, first create a syntactically correct postgresql query to run, then look at the results of the query and return the answer.
